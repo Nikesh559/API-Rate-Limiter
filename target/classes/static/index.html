@@ -14,7 +14,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <div id="myform">
+    <div id="myform" style="background-color: white;">
         <h2 id="hdr"><img id="icon" src="../static/7981768.png">API Rate Limiter</h2>
         <hr>
         <nav class="nav nav-pills flex-column flex-sm-row" id="tabs">
@@ -26,30 +26,32 @@
         <div id="bucket">
             <div class="row g-3 align-items-center">
                 <div>
-                    <label class="bucket label">Bucket Size </label>
+                    <label class="bucket label" id="bucket1">Bucket Size </label>
                     <div class="col-auto">
                         <input type="text" id="input1" class="form-control"
-                            aria-describedby="passwordHelpInline">
+                            aria-describedby="passwordHelpInline" value="10">
                     </div>
                 </div>
                 <br>
                 <div>
-                    <label id="bucket label">Refill Rate (In Seconds)</label>
+                    <label id="bucket label" id="bucket2">Refill Rate (In Seconds)</label>
                     <div class="col-auto">
                         <input type="text" id="input2" class="form-control"
-                            aria-describedby="passwordHelpInline">
+                            aria-describedby="passwordHelpInline" value="20">
                     </div>
                 </div>
+             
                 <div>
                     <div class="col-auto">
                         <button id="inputPassword6" type="button" class="btn btn-primary btn-sm" onclick="test()">Hit
                             API</button>
                     </div>
                 </div>
-                <br><br><br><br>
+                <br><br><br>
                 <div>
                     <p></p>
                     <label id="bucket label">Request Logs</label>
+                    <button onclick="clear()"> Clear </button>
                     <div class="col-auto">
                         <div class="d-flex justify-content-start" id="log"></div>
                     </div>
